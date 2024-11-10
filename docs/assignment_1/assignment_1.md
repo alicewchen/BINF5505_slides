@@ -36,6 +36,7 @@ They *differ from ordinary biological databases* in that they display data in a 
     1. GTEx
     2. gnomAD
 
+[Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
 ---
 
 ## Direction of arrows: 5’ > 3’ of a gene
@@ -74,19 +75,19 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Find disease variants using OMIM track
 
 Different variants of PLP1 are associated with different disease states
-![width:768px](../../img/assignment_1/image%203.png)<!-- Setting width to 768px -->
-![width:768px](../../img/assignment_1/image%204.png)<!-- Setting width to 768px -->
+![w:768 center](../../img/assignment_1/image%203.png)<!-- Setting width to 768px -->
+![w:768 center](../../img/assignment_1/image%204.png)<!-- Setting width to 768px -->
 
 Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
 ---
 
-## Find gene expression in specific tissues using GTEx Gene Expression track
+## Find tissue-specific gene expression in specific tissues using GTEx V8 track
 
-![width:768px](../../img/assignment_1/image%205.png)<!-- Setting width to 768px -->
-![width:768px](../../img/assignment_1/image%206.png)<!-- Setting width to 768px -->
+![bg vertical left:60%](../../img/assignment_1/image%205.png)<!-- Setting width to 768px -->
+![bg](../../img/assignment_1/image%206.png)<!-- Setting width to 768px -->
 
-- How does the tissue-specific location relate to the clinically expressed symptoms of this disease?
+- How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
 
 ---
 
