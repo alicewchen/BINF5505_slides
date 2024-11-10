@@ -3,15 +3,10 @@ marp: true
 -style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 theme: base-theme
 style: |
-img[alt$=">"] {
-  float: right;}
-img[alt$="<"] {
-  float: left;};
-img[alt$="><"] {
+img {
   display: block;
   height: auto;
-  margin: auto;
-  float: none!important;};
+  margin: auto};
 ---
 <style scoped>
 h1 {
@@ -51,22 +46,11 @@ They *differ from ordinary biological databases* in that they display data in a 
 
 ---
 
-## Direction of arrows: 5’ > 3’ of a gene <sup>[2]<\sup>
-![image](../../img/assignment_1/image.png)
- 
-<br>
-<br>
-
-[2]: https://genome.ucsc.edu/training/education/fivePrime.html
-
----
-
 ## Find the UTRs <sup>[2]</sup>
 
 ![image](../../img/assignment_1/image%201.png)
  
-<br>
-<br>
+- Direction of arrows: 5’ > 3’ of a gene
 
 [2]: https://genome.ucsc.edu/training/education/fivePrime.html
 
@@ -87,8 +71,9 @@ They *differ from ordinary biological databases* in that they display data in a 
 ## Find disease variants using OMIM track
 
 Different variants of PLP1 are associated with different disease states <sup>[3]</sup>
-![image](../../img/assignment_1/image%203.png)
-![image](../../img/assignment_1/image%204.png)
+
+![w:900](../../img/assignment_1/image%203.png)
+![w:900](../../img/assignment_1/image%204.png)
 
 [3]: http://genome.ucsc.edu/s/education/hg19_PLP1
 
@@ -109,7 +94,7 @@ Different variants of PLP1 are associated with different disease states <sup>[3]
 
 ## Find tissue-specific gene expression using GTEx V8 track
 
-![image](../../img/assignment_1/image%206.png)
+<p style="text-align:center"><img src="../../img/assignment_1/image%206.png" alt="img" width = "700px"></p>
 
 
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
@@ -141,8 +126,8 @@ Different variants of PLP1 are associated with different disease states <sup>[3]
 
 ## Find conserved regions using Conservation Tracks<sup>[5]</sup>
 
-![center](../../img/assignment_1/image%209.png)
-![center](../../img/assignment_1/image%2010.png)
+![w:960](../../img/assignment_1/image%209.png)
+![w:960](../../img/assignment_1/image%2010.png)
 
 - Highly conserved sequences often have important biological functions
     - Exons are highly conserved across species.
@@ -159,6 +144,3 @@ Different variants of PLP1 are associated with different disease states <sup>[3]
 
 - You are assigned to a group.  Each group is responsible for one genetic disease from Module 14.
 - Use the gene of interest for your group's genetic disease to complete Lab Assignment 1.
-
-
----
