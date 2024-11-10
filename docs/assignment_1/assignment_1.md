@@ -5,7 +5,7 @@ theme: base-theme
 <style scoped>
 h1 {
   font-weight: bold;
-  font-size: 36;
+  font-size: 48;
 }
 </style>
 # Module 2: Lab Assignment 1
@@ -37,37 +37,41 @@ They *differ from ordinary biological databases* in that they display data in a 
     2. gnomAD
 
 [Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
+
 ---
 
 ## Direction of arrows: 5’ > 3’ of a gene
 
-![image.png](../../img/assignment_1/image.png)
+![center](../../img/assignment_1/image.png)
  
- 
- 
- 
+<br><\br>
+<br><\br>
+<br><\br>
+
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
 
 ## Find the UTRs
 
-![image.png](../../img/assignment_1/image%201.png)
+![center](../../img/assignment_1/image%201.png)
  
- 
- 
- 
+<br><\br>
+<br><\br>
+<br><\br>
+
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
 
 ## Identify strand direction and exon
 
-![image.png](../../img/assignment_1/image%202.png)
+![center](../../img/assignment_1/image%202.png)
  
- 
- 
- 
+<br><\br>
+<br><\br>
+<br><\br>
+
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -75,8 +79,8 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Find disease variants using OMIM track
 
 Different variants of PLP1 are associated with different disease states
-![w:768 center](../../img/assignment_1/image%203.png)<!-- Setting width to 768px -->
-![w:768 center](../../img/assignment_1/image%204.png)<!-- Setting width to 768px -->
+![center](../../img/assignment_1/image%203.png)
+![center](../../img/assignment_1/image%204.png)
 
 Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
@@ -84,8 +88,8 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 
 ## Find tissue-specific gene expression in specific tissues using GTEx V8 track
 
-![bg vertical left:60%](../../img/assignment_1/image%205.png)<!-- Setting width to 768px -->
-![bg](../../img/assignment_1/image%206.png)<!-- Setting width to 768px -->
+![bg vertical left fit](../../img/assignment_1/image%205.png)
+![bg](../../img/assignment_1/image%206.png)
 
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
 
@@ -93,8 +97,8 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 
 ## Locate regulatory elements using ENCODE Tracks
 
-![image.png](../../img/assignment_1/image%207.png)
-![image.png](../../img/assignment_1/image%208.png)
+![center](../../img/assignment_1/image%207.png)
+![center](../../img/assignment_1/image%208.png)
 
 - Data is an overlay from **seven different cell lines**.
 
@@ -103,7 +107,7 @@ Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 ---
 ## Locate regulatory elements using ENCODE Tracks
 
-![image.png](../../img/assignment_1/image%208.png)
+![center](../../img/assignment_1/image%208.png)
 
 - **H3K Tracks: Height represents intensity** of acetylation of lysine on the H3 histone.
     - Higher peaks = more acetylation
@@ -116,8 +120,8 @@ Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
 ## Find conserved regions using Conservation Tracks
 
-![image.png](../../img/assignment_1/image%209.png)
-![image.png](../../img/assignment_1/image%2010.png)
+![center](../../img/assignment_1/image%209.png)
+![center](../../img/assignment_1/image%2010.png)
 
 - Highly conserved sequences often have important biological functions
     - Exons are highly conserved across species.
