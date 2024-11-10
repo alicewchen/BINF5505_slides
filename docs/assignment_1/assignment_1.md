@@ -22,7 +22,7 @@ h1 {
 # Module 2: Lab Assignment 1
 ---
 
-## What is a genome browser?
+## What is a genome browser? <sup>[1]</sup>
 
 Genome browsers *integrate genomic sequence and annotation data* from different sources and provide a platform to search, browse, retrieve, and analyze genomic data.
 
@@ -34,11 +34,11 @@ They *differ from ordinary biological databases* in that they display data in a 
 - Annotation means attaching biological information to sequences.
 
 
-[Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
+[1]:https://www.youtube.com/watch?v=s3JkAEAhkt8
 
 ---
 
-## Importance of Genome Browser
+## Importance of Genome Browser <sup>[1]</sup>
 
 - *Supports text and sequence-based searches* that provide quick, precise access to any region of interest.
 - *Visualize and browse entire genomes* with annotated data including gene prediction and structure, proteins, expression, regulation, variation, comparative analysis, etc. Annotated data is usually from multiple diverse sources.
@@ -47,85 +47,86 @@ They *differ from ordinary biological databases* in that they display data in a 
     1. GTEx
     2. gnomAD
 
-[Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
+[1]:https://www.youtube.com/watch?v=s3JkAEAhkt8
 
 ---
 
-## Direction of arrows: 5’ > 3’ of a gene
-
-![image alt ><](../../img/assignment_1/image.png)
+## Direction of arrows: 5’ > 3’ of a gene <sup>[2]<\sup>
+![image](../../img/assignment_1/image.png)
  
 <br>
 <br>
 
-Source: https://genome.ucsc.edu/training/education/fivePrime.html
+[2]: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
 
-## Find the UTRs
+## Find the UTRs <sup>[2]</sup>
 
-![center](../../img/assignment_1/image%201.png)
+![image](../../img/assignment_1/image%201.png)
  
 <br>
 <br>
 
-Source: https://genome.ucsc.edu/training/education/fivePrime.html
+[2]: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
 
-## Identify strand direction and exon
+## Identify strand direction and exon <sup>[2]</sup>
 
-![center](../../img/assignment_1/image%202.png)
+![image](../../img/assignment_1/image%202.png)
  
 <br>
 <br>
 
 
-Source: https://genome.ucsc.edu/training/education/fivePrime.html
+[2]: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
 
 ## Find disease variants using OMIM track
 
-Different variants of PLP1 are associated with different disease states
-![center](../../img/assignment_1/image%203.png)
-![center](../../img/assignment_1/image%204.png)
+Different variants of PLP1 are associated with different disease states <sup>[3]</sup>
+![image](../../img/assignment_1/image%203.png)
+![image](../../img/assignment_1/image%204.png)
 
-Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
+[3]: http://genome.ucsc.edu/s/education/hg19_PLP1
 
 ---
 
-## Find tissue-specific gene expression in specific tissues using GTEx V8 track
+## Find tissue-specific gene expression using GTEx V8 track
 
-<div class="grid grid-cols-2 gap-4">
-<div>
+![image](../../img/assignment_1/image%205.png)
 
-![image alt ><](../../img/assignment_1/image%205.png)
-![image alt ><](../../img/assignment_1/image%206.png)
+> ### Tissue Specificity of Human Disease Module <sup>[4]</sup>
+> - Disease-associated genes are more likely to exhibit tissue-specific expression than non-disease-associated genes 
+> - The integration of gene expression, disease manifestation, molecular network connectivity, and tissue specificity data leads to better predictions of novel disease-gene candidates than any of these elements alone
 
-</div>
 
-<div>
+[4]: https://doi.org/10.1038/srep35241 "Kitsak, M., Sharma, A., Menche, J. et al. Tissue Specificity of Human Disease Module. Sci Rep 6, 35241 (2016)."
+
+---
+
+## Find tissue-specific gene expression using GTEx V8 track
+
+![image](../../img/assignment_1/image%206.png)
+
 
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
 
-</div>
-</div>
-
 
 ---
 
-## Locate regulatory elements using ENCODE Tracks
+## Locate regulatory elements using ENCODE Tracks<sup>[5]</sup>
 
 ![center](../../img/assignment_1/image%207.png)
-![center](../../img/assignment_1/image%208.png)
-
+![center](../../img/assignment_1/image%208.png) 
 - Data is an overlay from **seven different cell lines**.
 
-Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+[5]: https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A
 
 ---
-## Locate regulatory elements using ENCODE Tracks
+## Locate regulatory elements using ENCODE Tracks<sup>[5]</sup>
 
 ![center](../../img/assignment_1/image%208.png)
 
@@ -134,22 +135,25 @@ Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
     - High histone acetylation often indicates regulatory elements.
 - **DNase I Hypersensitivity Track:** peaks indicate potential regulatory or promoter regions
 
-Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+[5]: https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A
 
 ---
 
-## Find conserved regions using Conservation Tracks
+## Find conserved regions using Conservation Tracks<sup>[5]</sup>
 
 ![center](../../img/assignment_1/image%209.png)
 ![center](../../img/assignment_1/image%2010.png)
 
 - Highly conserved sequences often have important biological functions
     - Exons are highly conserved across species.
-    - Regions with low conservation scorer experience more mutations.
+- Most pathogenic variants are located at conserved positions (high positive phyloP scores)<sup>[6]</sup>
 
-Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+[5]: https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A
+[6]: https://doi.org/10.1038/s41598-018-38189-9
 
 ---
+
+
 
 ## Lab Assignment 1 Instructions
 
