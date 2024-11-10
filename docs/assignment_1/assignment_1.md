@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: base-theme
+
 ---
 <style scoped>
 h1 {
@@ -39,6 +40,11 @@ They *differ from ordinary biological databases* in that they display data in a 
 [Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
 
 ---
+<style scoped>
+img {
+  align: center;
+}
+</style>
 
 ## Direction of arrows: 5’ > 3’ of a gene
 
@@ -83,15 +89,28 @@ Different variants of PLP1 are associated with different disease states
 Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
 ---
+<style scoped>
+@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+</style>
 
-## Find tissue-specific gene expression in specific tissues using GTEx V8 track
 
-[.column]
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
 ![bg fit](../../img/assignment_1/image%205.png)
 ![bg fit](../../img/assignment_1/image%206.png)
 
-[.column]
+</div>
+
+<div>
+
+## Find tissue-specific gene expression in specific tissues using GTEx V8 track
+
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
+</div>
+</div>
+
 
 ---
 
@@ -125,7 +144,7 @@ Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
 - Highly conserved sequences often have important biological functions
     - Exons are highly conserved across species.
-    - Regions outside show faster evolution.
+    - Regions with low conservation scorer experience more mutations.
 
 Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
@@ -134,7 +153,7 @@ Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 ## Lab Assignment 1 Instructions
 
 - You are assigned to a group.  Each group is responsible for one genetic disease from Module 14.
-- Use the gene of interest for your group's genetic disease to complete Lab Assignment 1.\
+- Use the gene of interest for your group's genetic disease to complete Lab Assignment 1.
 
 
 ---
