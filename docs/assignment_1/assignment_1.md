@@ -44,9 +44,8 @@ They *differ from ordinary biological databases* in that they display data in a 
 
 ![center](../../img/assignment_1/image.png)
  
-<br><\br>
-<br><\br>
-<br><\br>
+<br>
+<br>
 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
@@ -56,9 +55,8 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ![center](../../img/assignment_1/image%201.png)
  
-<br><\br>
-<br><\br>
-<br><\br>
+<br>
+<br>
 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
@@ -68,9 +66,9 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ![center](../../img/assignment_1/image%202.png)
  
-<br><\br>
-<br><\br>
-<br><\br>
+<br>
+<br>
+
 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
@@ -88,9 +86,11 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 
 ## Find tissue-specific gene expression in specific tissues using GTEx V8 track
 
-![bg vertical left fit](../../img/assignment_1/image%205.png)
-![bg](../../img/assignment_1/image%206.png)
+[.column]
+![bg fit](../../img/assignment_1/image%205.png)
+![bg fit](../../img/assignment_1/image%206.png)
 
+[.column]
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
 
 ---
