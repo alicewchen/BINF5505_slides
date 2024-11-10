@@ -2,6 +2,12 @@
 marp: true
 theme: base-theme
 ---
+<style scoped>
+h1 {
+  font-weight: bold;
+  font-size: 36;
+}
+</style>
 # Module 2: Lab Assignment 1
 ---
 
@@ -35,10 +41,10 @@ They *differ from ordinary biological databases* in that they display data in a 
 ## Direction of arrows: 5’ > 3’ of a gene
 
 ![image.png](../../img/assignment_1/image.png)
-
-
-
-
+ 
+ 
+ 
+ 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -46,10 +52,10 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Find the UTRs
 
 ![image.png](../../img/assignment_1/image%201.png)
-
-
-
-
+ 
+ 
+ 
+ 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -57,10 +63,10 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Identify strand direction and exon
 
 ![image.png](../../img/assignment_1/image%202.png)
-
-
-
-
+ 
+ 
+ 
+ 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -68,9 +74,8 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Find disease variants using OMIM track
 
 Different variants of PLP1 are associated with different disease states
-
-![image.png](../../img/assignment_1/image%203.png)
-![image.png](../../img/assignment_1/image%204.png)
+![width:768px](../../img/assignment_1/image%203.png)<!-- Setting width to 768px -->
+![width:768px](../../img/assignment_1/image%204.png)<!-- Setting width to 768px -->
 
 Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
@@ -78,8 +83,8 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 
 ## Find gene expression in specific tissues using GTEx Gene Expression track
 
-![image.png](../../img/assignment_1/image%205.png){ width=70% }
-![image.png](../../img/assignment_1/image%206.png){ width=70% }
+![width:768px](../../img/assignment_1/image%205.png)<!-- Setting width to 768px -->
+![width:768px](../../img/assignment_1/image%206.png)<!-- Setting width to 768px -->
 
 - How does the tissue-specific location relate to the clinically expressed symptoms of this disease?
 
@@ -92,7 +97,7 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 
 - Data is an overlay from **seven different cell lines**.
 
-Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
 ---
 ## Locate regulatory elements using ENCODE Tracks
@@ -104,7 +109,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
     - High histone acetylation often indicates regulatory elements.
 - **DNase I Hypersensitivity Track:** peaks indicate potential regulatory or promoter regions
 
-Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
 ---
 
@@ -117,7 +122,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
     - Exons are highly conserved across species.
     - Regions outside show faster evolution.
 
-Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
+Source: [hg38_KMT2A](https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A)
 
 ---
 
