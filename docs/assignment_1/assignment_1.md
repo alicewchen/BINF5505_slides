@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 -style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 theme: base-theme
 style: |
@@ -7,6 +7,8 @@ img {
   display: block;
   height: auto;
   margin: auto};
+markdown: 
+  - html: true
 ---
 <style scoped>
 h1 {
