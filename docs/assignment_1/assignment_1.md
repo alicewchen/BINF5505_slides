@@ -2,7 +2,16 @@
 marp: true
 -style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 theme: base-theme
-
+style: |
+img[alt$=">"] {
+  float: right;}
+img[alt$="<"] {
+  float: left;};
+img[alt$="><"] {
+  display: block;
+  height: auto;
+  margin: auto;
+  float: none!important;};
 ---
 <style scoped>
 h1 {
@@ -41,15 +50,10 @@ They *differ from ordinary biological databases* in that they display data in a 
 [Source](https://www.youtube.com/watch?v=s3JkAEAhkt8)
 
 ---
-<style scoped>
-img {
-  align: center;
-}
-</style>
 
 ## Direction of arrows: 5’ > 3’ of a gene
 
-![center](../../img/assignment_1/image.png)
+![image alt ><](../../img/assignment_1/image.png)
  
 <br>
 <br>
@@ -90,25 +94,21 @@ Different variants of PLP1 are associated with different disease states
 Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
 ---
-<style scoped>
-@import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
-</style>
 
-
+## Find tissue-specific gene expression in specific tissues using GTEx V8 track
 
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-![img.png](../../img/assignment_1/image%205.png)
-![img.png](../../img/assignment_1/image%206.png)
+![image alt ><](../../img/assignment_1/image%205.png)
+![image alt ><](../../img/assignment_1/image%206.png)
 
 </div>
 
 <div>
 
-## Find tissue-specific gene expression in specific tissues using GTEx V8 track
-
 - How do gene expression at specific tissues relate to the clinically expressed symptoms of this disease?
+
 </div>
 </div>
 
