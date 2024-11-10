@@ -1,5 +1,6 @@
 ---
 marp: true
+-style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 theme: base-theme
 
 ---
@@ -98,8 +99,8 @@ Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-![bg fit](../../img/assignment_1/image%205.png)
-![bg fit](../../img/assignment_1/image%206.png)
+![img.png](../../img/assignment_1/image%205.png)
+![img.png](../../img/assignment_1/image%206.png)
 
 </div>
 
