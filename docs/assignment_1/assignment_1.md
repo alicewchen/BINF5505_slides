@@ -1,3 +1,11 @@
+---
+theme: base-theme
+style: |
+  section h2 {
+  text-align: left;
+  }
+---
+
 Module 2: Lab Assignment 1
 =====
 
@@ -65,8 +73,8 @@ Source: [**http://genome.ucsc.edu/s/education/hg19_PLP1**](http://genome.ucsc.ed
 
 ## Find gene expression in specific tissues using GTEx Gene Expression track
 
-![image.png](../../img/assignment_1/image%205.png)
-![image.png](../../img/assignment_1/image%206.png)
+![70% image.png](../../img/assignment_1/image%205.png)
+![70% image.png](../../img/assignment_1/image%206.png)
 
 - How does the tissue-specific location relate to the clinically expressed symptoms of this disease?
 
@@ -74,8 +82,8 @@ Source: [**http://genome.ucsc.edu/s/education/hg19_PLP1**](http://genome.ucsc.ed
 
 ## Locate regulatory elements using ENCODE Tracks
 
-![image.png](../../img/assignment_1/image%207.png)
-![image.png](../../img/assignment_1/image%208.png)
+![70% image.png](../../img/assignment_1/image%207.png)
+![70% image.png](../../img/assignment_1/image%208.png)
 
 - Data is an overlay from **seven different cell lines**.
 
@@ -84,8 +92,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
 ---
 ## Locate regulatory elements using ENCODE Tracks
 
-![image.png](../../img/assignment_1/image%207.png)
-![image.png](../../img/assignment_1/image%208.png)
+![70% image.png](../../img/assignment_1/image%208.png)
 
 - **H3K Tracks: Height represents intensity** of acetylation of lysine on the H3 histone.
     - Higher peaks = more acetylation
@@ -96,9 +103,9 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
 
 ---
 
-## Finding conserved regions using Conservation Tracks
+## Find conserved regions using Conservation Tracks
 
-![image.png](../../img/assignment_1/image%209.png)
+![70% image.png](../../img/assignment_1/image%209.png)
 ![image.png](../../img/assignment_1/image%2010.png)
 
 - Highly conserved sequences often have important biological functions
