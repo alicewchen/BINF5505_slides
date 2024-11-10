@@ -1,13 +1,9 @@
 ---
+marp: true
 theme: base-theme
-style: |
-  section h2 {
-  text-align: left;
-  }
 ---
-
-Module 2: Lab Assignment 1
-=====
+# Module 2: Lab Assignment 1
+---
 
 ## What is a genome browser?
 
@@ -40,6 +36,9 @@ They *differ from ordinary biological databases* in that they display data in a 
 
 ![image.png](../../img/assignment_1/image.png)
 
+
+
+
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -48,6 +47,9 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ![image.png](../../img/assignment_1/image%201.png)
 
+
+
+
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
 ---
@@ -55,6 +57,9 @@ Source: https://genome.ucsc.edu/training/education/fivePrime.html
 ## Identify strand direction and exon
 
 ![image.png](../../img/assignment_1/image%202.png)
+
+
+
 
 Source: https://genome.ucsc.edu/training/education/fivePrime.html
 
@@ -67,14 +72,14 @@ Different variants of PLP1 are associated with different disease states
 ![image.png](../../img/assignment_1/image%203.png)
 ![image.png](../../img/assignment_1/image%204.png)
 
-Source: [**http://genome.ucsc.edu/s/education/hg19_PLP1**](http://genome.ucsc.edu/s/education/hg19_PLP1)
+Source: [http://genome.ucsc.edu/s/education/hg19_PLP1](http://genome.ucsc.edu/s/education/hg19_PLP1)
 
 ---
 
 ## Find gene expression in specific tissues using GTEx Gene Expression track
 
-![70% image.png](../../img/assignment_1/image%205.png)
-![70% image.png](../../img/assignment_1/image%206.png)
+![image.png](../../img/assignment_1/image%205.png){ width=70% }
+![image.png](../../img/assignment_1/image%206.png){ width=70% }
 
 - How does the tissue-specific location relate to the clinically expressed symptoms of this disease?
 
@@ -82,8 +87,8 @@ Source: [**http://genome.ucsc.edu/s/education/hg19_PLP1**](http://genome.ucsc.ed
 
 ## Locate regulatory elements using ENCODE Tracks
 
-![70% image.png](../../img/assignment_1/image%207.png)
-![70% image.png](../../img/assignment_1/image%208.png)
+![image.png](../../img/assignment_1/image%207.png)
+![image.png](../../img/assignment_1/image%208.png)
 
 - Data is an overlay from **seven different cell lines**.
 
@@ -92,7 +97,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
 ---
 ## Locate regulatory elements using ENCODE Tracks
 
-![70% image.png](../../img/assignment_1/image%208.png)
+![image.png](../../img/assignment_1/image%208.png)
 
 - **H3K Tracks: Height represents intensity** of acetylation of lysine on the H3 histone.
     - Higher peaks = more acetylation
@@ -105,7 +110,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
 
 ## Find conserved regions using Conservation Tracks
 
-![70% image.png](../../img/assignment_1/image%209.png)
+![image.png](../../img/assignment_1/image%209.png)
 ![image.png](../../img/assignment_1/image%2010.png)
 
 - Highly conserved sequences often have important biological functions
@@ -119,4 +124,7 @@ Source: [https://genome.ucsc.edu/s/alicewchen/hg38_KMT2A](https://genome.ucsc.ed
 ## Lab Assignment 1 Instructions
 
 - You are assigned to a group.  Each group is responsible for one genetic disease from Module 14.
-- Use the gene of interest for your group's genetic disease to complete Lab Assignment 1.
+- Use the gene of interest for your group's genetic disease to complete Lab Assignment 1.\
+
+
+---
