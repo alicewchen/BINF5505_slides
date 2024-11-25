@@ -192,6 +192,37 @@ Schematic representation of a mutation occurring after conception, during mitoti
 
 ---
 
+## Variable Expression through Genetic Factors
+
+- **Allelic Variability**: Different combinations of disease variants can lead to varying disease severity.
+- **Gene-Gene Interactions** (Epistasis): One gene's effect can be modified by one or several other genes.
+- **Copy Number Variations**: Differences in the number of copies of a particular gene can influence expression.
+
+**(We will go through these in more detail in later modules)**
+
+---
+
+## Variable Expression through Gene-Environment Interaction
+
+- Environmental factors can modify gene expression and disease risk,  so the same combinations of disease variants can lead to different outcomes based on environmental exposures.
+- Lifestyle factors: diet, physical activity, substance use
+- Physical environment: pollutants, toxins, climate, geography
+- Psychosocial factors: stres, socioeconomic status
+
+**(We will go through these in more detail in later modules)**
+
+---
+
+## Variable Expression through Epigenetic Effects
+
+- **Gene regulation**: Epigenetic modifications can activate or repress genes, leading to variability in disease phenotypes among individuals with similar genetic backgrounds.
+- **Environmental interactions**: Lifestyle factors like diet, stress, and exposure to toxins can induce epigenetic changes influencing disease risk.
+- **Intergenerational effects**: Some epigenetic marks can be transmitted to offspring, affecting their susceptibility to diseases.
+
+**(We will go through these in more detail in later modules)**
+
+---
+
 ## Human Mortality Curve <sup>[1]</sup>
 
 ![bg left 90%](../../img/module_2/image1.jpg)
