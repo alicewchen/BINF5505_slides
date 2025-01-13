@@ -116,21 +116,53 @@ Since only males inherit the Y chromosome from their fathers, Y-linked traits ar
 
 ---
 
+<main id="main" style="display: flex; border: 1px; padding: 1px;">
+
+<left style="flex: 1; padding-right: 1px;background-color:rgb(255, 255, 255);" markdown="span">
+
 ## 1. X-chromosome Inactivation
 
 - Some cells in females randomly inactivate one of the X chromosomes carrying the mutant allele during early embryonic development
 - **Unbalanced/skewed X inactivation** occurs when the fraction of cells in various tissues of carrier females in which the normal or pathogenic allele happens to remain active deviate substantially from the expected 50%
 
+</left>
+<right id="col_right" style="flex: 1; padding-left: 1px;background-color:rgb(255, 255, 255);font-size:14pt" markdown="span">
+
+<p></p>
+
+<p style="text-align:center"><img src="../../img/module_2/x_inactivation.png" alt="img" width = "400px"></p>
+
+Mosaic expression of a mutant X-linked gene, such as FoxP3, in females depends on X chromosome inactivation. Growth of cells carrying a mutant allele can be actively suppressed by negative selection resulting in skewed X inactivation.<sup>[1]</sup>
+
+</right>
+</main>
+
+[1]:(https://doi.org/10.1016/j.cell.2007.06.008) "Medema, R. H. & Burgering, B. M. T. The X Factor: Skewing X Inactivation towards Cancer. Cell 129, 1253-1254 (2007). https://doi.org/https://doi.org/10.1016/j.cell.2007.06.008"
+
 <!--Depending on the pattern of random inactivation of the two X chromosomes, two female heterozygotes for an X-linked disease may have very different clinical presentations because they differ in the proportion of cells that have the pathogenic allele on the active X in a relevant tissue-->
 ---
 
 ## 2. Mosaicism
+<main id="main" style="display: flex; border: 1px; padding: 10px;">
+
+<left style="flex: 1; padding-right: 1px;background-color:rgb(255, 255, 255);" markdown="span">
 
 - Occurs when at least two cell lineages that differ genetically but are derived from a single zygote are expressed in an individual or a tissue
 - Many types of expression: pure somatic, pure germline, or both
-- Segmental mosaicism: occurs when the mutation affects morphogenesis and manifests as a segmental or patchy abnormality
+- **Segmental mosaicism**: occurs when the mutation affects morphogenesis and manifests as a segmental or patchy abnormality
 
-<p style="text-align:center"><img src="../../img/module_2/image2.jpg" alt="img" width = "400px"></p>
+[Image source](https://doi.org/10.1038/nrg906)
+
+</left>
+<right id="col_right" style="flex: 1; padding-left: 1px;background-color:rgb(255, 255, 255);" markdown="span">
+
+<p style="text-align:center"><img src="../../img/module_2/mosaicism.png" alt="img" width = "400px"></p>
+
+</right>
+</main>
+
+
+
 
 <!--    
 - Pure somatic: present in some tissues of the embryo but not in the gametes 
@@ -142,9 +174,25 @@ Schematic representation of a mutation occurring after conception, during mitoti
 
 ## 3. Genomic Imprinting
 
-- Occurs when the sex of the parent who transmits the pathogenic allele determines whether there is expression of the disorder in a child
-- Can cause unusual inheritance patterns: a disorder can appear to be inherited in a dominant manner when transmitted from one parent, but not from the other.
+<main id="main" style="display: flex; border: 1px; padding: 1px;">
+
+<left style="flex: 1; padding-right: 1px;background-color:rgb(255, 255, 255);" markdown="span">
+
+- Occurs when the sex of the parent who transmits the pathogenic allele determines whether there is expression of the disorder in a child.
+- Methylation marks the imprinted genes differently in egg and sperm, and inheritance of these epigenetic marks leads to differential gene expression.
 - Examples: Prader-Willi syndrome, Angelman syndrome
+
+</left>
+
+<right id="col_right" style="flex: 1; padding-left: 1px;background-color:rgb(255, 255, 255);" markdown="span">
+
+<p style="text-align:center"><img src="../../img/module_2/genomic_imprinting.png" alt="img" width = "400px"></p>
+
+[Image source](https://doi.org/10.1038/35047554)
+
+</right>
+</main>
+
 
 ---
 
@@ -207,7 +255,7 @@ Schematic representation of a mutation occurring after conception, during mitoti
 - Environmental factors can modify gene expression and disease risk,  so the same combinations of disease variants can lead to different outcomes based on environmental exposures.
 - Lifestyle factors: diet, physical activity, substance use
 - Physical environment: pollutants, toxins, climate, geography
-- Psychosocial factors: stres, socioeconomic status
+- Psychosocial factors: stress, socioeconomic status
 
 **(We will go through these in more detail in later modules)**
 
@@ -223,14 +271,16 @@ Schematic representation of a mutation occurring after conception, during mitoti
 
 ---
 
-## Human Mortality Curve <sup>[1]</sup>
+## Lab 1a: Navigating Public Databases
 
-![bg left 90%](../../img/module_2/image1.jpg)
+The class is assigned into 6 groups of 4-5 students. You can find your group on Blackboard.
 
-- Monogenic diseases are most commonly expressed in early childhood and later in life due to strong selection against disease expression during peak reproductivity age.
-- After puberty, most genetic diseases are polygenic and only lead to disease expression when combined with other "nongenetic" triggers—like lifestyle or environmental factors.
-<!--
-- Monogenic diseases are most common in early childhood and then again later in life, with fewer cases during the reproductive years (young adulthood) due to strong selection against these diseases when they appear at an age that could affect an individual’s ability to reproduce.
-- After puberty, most genetic diseases that show up are not due to monogenic (single-gene) causes alone. Instead, they’re often due to more complex genetic factors that only lead to disease when combined with other "nongenetic" triggers—like lifestyle or environmental factors.
--->
-[1]:(https://doi.org/10.1016/B978-0-12-812537-3.00001-9) "Pyeritz, R. E. Medicine in a genetic and genomic context. In Emery and Rimoin's Principles and Practice of Medical Genetics and Genomics (7th edn) (eds. Pyeritz, R. E., Korf, B. R. & Grody, W. W.) 1–20 (Academic Press, 2019)."
+![alt text](../../img/module_2/image4.png)
+
+---
+
+## Lab 1a: Navigating Public Databases
+
+Each group is assigned a monogenic/polygenic disease (see **Module 14: Case Study Topics** for more details). 
+
+For Lab 1a, you will be using the gene associated with your assigned disease. You may work with your group but the lab assignment must be submitted individually.
