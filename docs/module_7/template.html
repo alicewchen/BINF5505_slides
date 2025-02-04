@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>RNA-seq Experiment and Analysis Guideline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h2, h3 {
+            margin-top: 2em;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 2em;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+        th {
+            background: #f5f5f5;
+        }
+        .section-title {
+            margin-top: 40px;
+            margin-bottom: 5px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .subsection-title {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>1. Experiment Overview and Goals</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>1.1 Biological Question or Hypothesis</strong></td>
+    <td>
+      &ndash; Clearly state the scientific question or hypothesis.<br/>
+      &ndash; Specify why RNA-seq is an appropriate method.
+    </td>
+    <td>
+      &ndash; A vague or overly broad question can make it difficult to focus analysis.<br/>
+      &ndash; Ensure a well-defined scope to avoid wasted effort.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>1.2 Experimental Design</strong></td>
+    <td>
+      &ndash; Describe sample groups, conditions, or treatments.<br/>
+      &ndash; Indicate the number of replicates and selection rationale.<br/>
+      &ndash; Mention any blocking or randomization factors.
+    </td>
+    <td>
+      &ndash; Lack of biological replicates reduces statistical power.<br/>
+      &ndash; Unaccounted batch effects can confound results.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>1.3 Intended Outcomes</strong></td>
+    <td>
+      &ndash; Outline what you hope to discover (e.g., DE genes, pathways).<br/>
+      &ndash; State plans for downstream validation if applicable.
+    </td>
+    <td>
+      &ndash; Without clear goals, downstream interpretation might be ambiguous.<br/>
+      &ndash; Not planning validation steps can undermine confidence in findings.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>1.4 Power Analysis / Sample Size Rationale</strong></td>
+    <td>
+      &ndash; If done, describe any power or sample size calculations.
+    </td>
+    <td>
+      &ndash; Underpowering leads to high false negatives.<br/>
+      &ndash; Overpowering can be expensive and cumbersome to analyze.
+    </td>
+  </tr>
+</table>
+
+<h2>2. Sequencing (Biochemistry)</h2>
+
+<h3>2(a). RNA Extraction</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>2a.1 Protocol or Kit Used</strong></td>
+    <td>
+      &ndash; Specify the extraction kit or protocol (e.g., TRIzol, column-based kit).<br/>
+      &ndash; Note any special modifications.
+    </td>
+    <td>
+      &ndash; Failure to remove genomic DNA can affect downstream analysis.<br/>
+      &ndash; RNA extraction methods differ in yield and purity.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2a.2 RNA Quantity &amp; Quality Assessment</strong></td>
+    <td>
+      &ndash; Methods (e.g., Nanodrop, Qubit, Bioanalyzer).<br/>
+      &ndash; Set acceptance criteria (e.g., RIN ≥ 7).
+    </td>
+    <td>
+      &ndash; Low integrity (low RIN) may compromise library prep.<br/>
+      &ndash; Contaminants (e.g., phenol) can interfere with downstream steps.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2a.3 Sample Storage &amp; Handling</strong></td>
+    <td>
+      &ndash; Indicate storage conditions (e.g., -80°C, LN2).<br/>
+      &ndash; Describe thawing procedures.
+    </td>
+    <td>
+      &ndash; Multiple freeze-thaw cycles degrade RNA.<br/>
+      &ndash; Inconsistent handling among samples can introduce variability.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2a.4 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Summarize typical issues (e.g., contamination, degradation).
+    </td>
+    <td>
+      &ndash; Always use RNase-free equipment.<br/>
+      &ndash; Properly label and track each sample to avoid mix-ups.
+    </td>
+  </tr>
+</table>
+
+<h3>2(b). Library Preparation</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>2b.1 mRNA Enrichment or rRNA Depletion</strong></td>
+    <td>
+      &ndash; State the method (Poly(A) selection or rRNA depletion).<br/>
+      &ndash; Justify choice based on sample type and goals.
+    </td>
+    <td>
+      &ndash; rRNA depletion may be preferable for bacterial or degraded samples.<br/>
+      &ndash; Incomplete rRNA removal affects mapping.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2b.2 Library Construction Kit/Protocol</strong></td>
+    <td>
+      &ndash; Name the kit (e.g., NEB, Illumina TruSeq).<br/>
+      &ndash; Describe adapter/barcode strategy.<br/>
+      &ndash; Note PCR cycle number to avoid over-amplification.
+    </td>
+    <td>
+      &ndash; Over-amplification biases representation of fragments.<br/>
+      &ndash; Adapter dimers need removal before sequencing.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2b.3 Library Quality Control</strong></td>
+    <td>
+      &ndash; Method used for quantification (Qubit, Bioanalyzer).<br/>
+      &ndash; Typical fragment size distribution.
+    </td>
+    <td>
+      &ndash; Inconsistent concentrations skew multiplexing.<br/>
+      &ndash; Primer dimer peaks indicate contamination.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2b.4 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Outline common issues (adapter contamination, low yield).
+    </td>
+    <td>
+      &ndash; Validate libraries prior to sequencing to save cost/time.<br/>
+      &ndash; Keep precise records of all steps for reproducibility.
+    </td>
+  </tr>
+</table>
+
+<h3>2(c). Sequencing</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>2c.1 Sequencing Platform &amp; Parameters</strong></td>
+    <td>
+      &ndash; Specify instrument (e.g., Illumina NovaSeq).<br/>
+      &ndash; State read length &amp; type (SE or PE).<br/>
+      &ndash; Expected depth (e.g., 20–50M reads/sample).
+    </td>
+    <td>
+      &ndash; Under-sequencing can miss low-abundance transcripts.<br/>
+      &ndash; Over-sequencing increases cost without more insight.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2c.2 Run Quality Control</strong></td>
+    <td>
+      &ndash; Real-time metrics: cluster density, Q30.<br/>
+      &ndash; Use of spike-in controls (if applicable).
+    </td>
+    <td>
+      &ndash; Poor Q30 scores indicate run issues.<br/>
+      &ndash; Mis-indexing in multiplexed runs can lead to cross-contamination.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2c.3 Data Output &amp; Storage</strong></td>
+    <td>
+      &ndash; FASTQ file format.<br/>
+      &ndash; Backup strategy (local plus cloud).
+    </td>
+    <td>
+      &ndash; Lack of robust backup can lead to data loss.<br/>
+      &ndash; Use clear naming conventions for all FASTQ files.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>2c.4 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Summarize typical run problems (index hopping, high duplication).
+    </td>
+    <td>
+      &ndash; Use unique dual indices to reduce index hopping.<br/>
+      &ndash; Monitor duplication levels for library complexity.
+    </td>
+  </tr>
+</table>
+
+<h2>3. Bioinformatics</h2>
+
+<h3>3(a). Processing of Sequencing Reads</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>3a.1 Quality Assessment</strong></td>
+    <td>
+      &ndash; Tools (e.g., FastQC, MultiQC).<br/>
+      &ndash; Check GC content, per-base sequence quality, adapter contamination, etc.
+    </td>
+    <td>
+      &ndash; Failing to remove adapters can lead to poor alignment.<br/>
+      &ndash; Skewed GC content may indicate contamination/bias.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3a.2 Read Trimming &amp; Filtering</strong></td>
+    <td>
+      &ndash; Software used (e.g., Trimmomatic, Cutadapt).<br/>
+      &ndash; Criteria (Q ≥ 20, min read length, etc.).
+    </td>
+    <td>
+      &ndash; Over-trimming removes too many reads.<br/>
+      &ndash; Under-trimming leaves low-quality bases.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3a.3 Alignment</strong></td>
+    <td>
+      &ndash; Reference genome/transcriptome version.<br/>
+      &ndash; Aligner (STAR, HISAT2).<br/>
+      &ndash; Key parameters (mismatch allowance, splice junction detection).
+    </td>
+    <td>
+      &ndash; Using an outdated reference leads to poor annotation.<br/>
+      &ndash; Multi-mapped reads can inflate counts if not handled properly.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3a.4 File Formats &amp; Intermediate Outputs</strong></td>
+    <td>
+      &ndash; Aligned read files (SAM/BAM).<br/>
+      &ndash; Summary of alignment metrics (% mapped, duplication).
+    </td>
+    <td>
+      &ndash; Inconsistent file naming causes confusion.<br/>
+      &ndash; Not saving intermediate QC complicates troubleshooting.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3a.5 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Summarize common problems (low mapping rate, high duplication).
+    </td>
+    <td>
+      &ndash; Verify mismatch parameters and reference correctness.<br/>
+      &ndash; Explore different aligners if alignment is poor.
+    </td>
+  </tr>
+</table>
+
+<h3>3(b). Estimation of Gene Expression Levels</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>3b.1 Quantification Tools</strong></td>
+    <td>
+      &ndash; Alignment-based (FeatureCounts, HTSeq) vs. alignment-free (Salmon, Kallisto).<br/>
+      &ndash; Rationale (speed, accuracy, handling multi-mapped reads).
+    </td>
+    <td>
+      &ndash; Mismatch between aligner and quantifier can cause errors.<br/>
+      &ndash; Pseudoalignment tools need careful indexing.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3b.2 Gene Model Annotation</strong></td>
+    <td>
+      &ndash; Reference annotation file (GTF/GFF).<br/>
+      &ndash; Must match reference genome version.
+    </td>
+    <td>
+      &ndash; Different annotation versions may omit or add genes.<br/>
+      &ndash; Novel transcripts require extra steps to quantify.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3b.3 Output &amp; Format</strong></td>
+    <td>
+      &ndash; Raw count matrix (genes vs. samples).<br/>
+      &ndash; Normalized measures (TPM, RPKM, etc.) if needed.
+    </td>
+    <td>
+      &ndash; Only storing normalized data obscures original read counts.<br/>
+      &ndash; Keep consistent gene/transcript naming conventions.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3b.4 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Summarize frequent issues (annotation mismatch, incomplete quantification).
+    </td>
+    <td>
+      &ndash; Verify annotation version carefully.<br/>
+      &ndash; Compare alignment-based vs. pseudoalignment if uncertain.
+    </td>
+  </tr>
+</table>
+
+<h3>3(c). Normalization</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>3c.1 Normalization Methods</strong></td>
+    <td>
+      &ndash; Specify approach (DESeq2, edgeR TMM, TPM, etc.).<br/>
+      &ndash; Explain why it suits your dataset.
+    </td>
+    <td>
+      &ndash; Inappropriate normalization inflates/deflates signals.<br/>
+      &ndash; Different methods handle low-count genes differently.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3c.2 Biases Addressed</strong></td>
+    <td>
+      &ndash; Note how it handles library size and composition bias.<br/>
+      &ndash; Mention if GC-content or length bias correction is needed.
+    </td>
+    <td>
+      &ndash; Not accounting for batch effects can mask true differences.<br/>
+      &ndash; Large sample-to-sample variations need robust methods.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3c.3 Visual Quality Checks</strong></td>
+    <td>
+      &ndash; Boxplots/density plots of raw vs. normalized data.<br/>
+      &ndash; PCA/MDS plots to detect outliers or batch effects.
+    </td>
+    <td>
+      &ndash; Ignoring outliers skews results.<br/>
+      &ndash; Confirm replicates cluster by condition, not by batch.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3c.4 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Summarize typical issues (extreme outliers, incomplete batch correction).
+    </td>
+    <td>
+      &ndash; Investigate/remove outliers carefully.<br/>
+      &ndash; Always document reasons for removing samples.
+    </td>
+  </tr>
+</table>
+
+<h3>3(d). Identification of Differentially Expressed (DE) Genes</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>3d.1 Statistical Method / Tool</strong></td>
+    <td>
+      &ndash; Indicate software (DESeq2, edgeR, limma-voom).<br/>
+      &ndash; Model design (~ condition + batch + other covariates).
+    </td>
+    <td>
+      &ndash; Ignoring batch effects confounds results.<br/>
+      &ndash; Overfitting reduces power.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.2 Multiple Testing Correction</strong></td>
+    <td>
+      &ndash; Method (Benjamini–Hochberg, etc.).<br/>
+      &ndash; Typical alpha threshold (FDR < 0.05).
+    </td>
+    <td>
+      &ndash; Not correcting inflates false positives.<br/>
+      &ndash; Overly strict thresholds may miss true positives.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.3 Output &amp; Visualization</strong></td>
+    <td>
+      &ndash; Fold change (log2FC) and adjusted p-values.<br/>
+      &ndash; Volcano plots, MA plots, heatmaps of significant genes.
+    </td>
+    <td>
+      &ndash; Inconsistent naming or ordering can be confusing.<br/>
+      &ndash; Always track annotation version used.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.4 Biological Interpretation</strong></td>
+    <td>
+      &ndash; Gene ontology, pathway analysis, etc.<br/>
+      &ndash; Reference public databases and literature.
+    </td>
+    <td>
+      &ndash; Automated tools can produce spurious results.<br/>
+      &ndash; qRT-PCR is recommended for top candidates.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.5 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Common pitfalls (low-count genes, incomplete model).
+    </td>
+    <td>
+      &ndash; Filter out low-expressed genes.<br/>
+      &ndash; Revisit model design if results are inconsistent.
+    </td>
+  </tr>
+</table>
+
+<h2>4. Additional Considerations</h2>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>4.1 Data Management &amp; Reproducibility</strong></td>
+    <td>
+      &ndash; Version control for analysis (Git).<br/>
+      &ndash; Use containers (Docker) or workflow managers (Nextflow, Snakemake).
+    </td>
+    <td>
+      &ndash; Not documenting software versions <br/>
+      &nbsp;&nbsp;&nbsp;→ irreproducible pipeline.<br/>
+      &ndash; Manual file handling introduces errors.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>4.2 Downstream Validation</strong></td>
+    <td>
+      &ndash; Plan qRT-PCR or other assays for DE validation.<br/>
+      &ndash; Consider knockout/knockdown for functional tests.
+    </td>
+    <td>
+      &ndash; Relying solely on RNA-seq may yield false positives.<br/>
+      &ndash; Poor assay design can miss target transcripts.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>4.3 Reporting Standards &amp; Data Sharing</strong></td>
+    <td>
+      &ndash; Follow guidelines (e.g., MINSEQE).<br/>
+      &ndash; Submit data to public repositories (GEO, SRA).
+    </td>
+    <td>
+      &ndash; Incomplete metadata reduces reusability.<br/>
+      &ndash; Delayed data sharing impedes reproducibility.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>4.4 Future Directions</strong></td>
+    <td>
+      &ndash; Single-cell RNA-seq for cellular resolution.<br/>
+      &ndash; Long-read (PacBio, Nanopore) for isoforms.<br/>
+      &ndash; Multi-omics (proteomics, metabolomics) for systems biology.
+    </td>
+    <td>
+      &ndash; Each advanced technique requires specialized expertise.<br/>
+      &ndash; Integrating multiple omics can be computationally complex.
+    </td>
+  </tr>
+</table>
+
+<h3>How to Use This Template</h3>
+<p>
+1. Copy and paste these tables into your own documentation (README, Word doc, etc.).<br/>
+2. Fill in details for your specific study under each row.<br/>
+3. Track changes with version control if possible.<br/>
+4. Include these tables in supplementary methods for clarity and reproducibility.
+</p>
+
+</body>
+</html>
