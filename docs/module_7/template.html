@@ -305,16 +305,6 @@
       &ndash; Not saving intermediate QC complicates troubleshooting.
     </td>
   </tr>
-  <tr>
-    <td><strong>3a.5 Potential Pitfalls / Mitigation</strong></td>
-    <td>
-      &ndash; Summarize common problems (low mapping rate, high duplication).
-    </td>
-    <td>
-      &ndash; Verify mismatch parameters and reference correctness.<br/>
-      &ndash; Explore different aligners if alignment is poor.
-    </td>
-  </tr>
 </table>
 
 <h3>3(b). Estimation of Gene Expression Levels</h3>
@@ -421,7 +411,7 @@
   </tr>
 </table>
 
-<h3>3(d). Identification of Differentially Expressed (DE) Genes</h3>
+<h3>3(d). Read Transformation</h3>
 <table>
   <tr>
     <th style="width: 25%;">Subtopic</th>
@@ -429,7 +419,52 @@
     <th style="width: 25%;">Potential Pitfalls / Tips</th>
   </tr>
   <tr>
-    <td><strong>3d.1 Statistical Method / Tool</strong></td>
+    <td><strong>3d.1 Common Methods</strong></td>
+    <td>
+      &ndash; Variance Stabilizing Transformation (VST) in DESeq2.<br/>
+      &ndash; rlog transformation (DESeq2).<br/>
+      &ndash; limma-voom or simple log<sub>2</sub> with pseudocount.<br/>
+      &ndash; Describe which tool/package is used and why (data size, speed, interpretability).
+    </td>
+    <td>
+      &ndash; rlog can be computationally intensive for large datasets.<br/>
+      &ndash; Some transformations may flatten large differences or overemphasize low counts.
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.2 Use Cases</strong></td>
+    <td>
+      &ndash; Exploratory data analysis (PCA, heatmaps, clustering).<br/>
+      &ndash; Quality control checks (identifying outliers).<br/>
+      &ndash; Facilitating visualization and interpretability.
+    </td>
+    <td>
+      &ndash; Using raw counts for PCA can overemphasize highly expressed genes.<br/>
+      &ndash; Transformed data is typically not suitable for final DE testing (depends on pipeline).
+    </td>
+  </tr>
+  <tr>
+    <td><strong>3d.3 Potential Pitfalls / Mitigation</strong></td>
+    <td>
+      &ndash; Understand whether the transformation is strictly for visualization/QC or if it feeds into a downstream model.<br/>
+      &ndash; Document software version and parameters (e.g., DESeq2 version, blind vs. design-aware VST).
+    </td>
+    <td>
+      &ndash; Failing to note transformation method can confuse downstream collaborators.<br/>
+      &ndash; Inappropriate transformations may distort differential signals if used for DE analysis directly.
+    </td>
+  </tr>
+</table>
+
+<h3>3(e). Identification of Differentially Expressed (DE) Genes</h3>
+<table>
+  <tr>
+    <th style="width: 25%;">Subtopic</th>
+    <th style="width: 50%;">Key Documentation Steps</th>
+    <th style="width: 25%;">Potential Pitfalls / Tips</th>
+  </tr>
+  <tr>
+    <td><strong>3e.1 Statistical Method / Tool</strong></td>
     <td>
       &ndash; Indicate software (DESeq2, edgeR, limma-voom).<br/>
       &ndash; Model design (~ condition + batch + other covariates).
@@ -440,7 +475,7 @@
     </td>
   </tr>
   <tr>
-    <td><strong>3d.2 Multiple Testing Correction</strong></td>
+    <td><strong>3e.2 Multiple Testing Correction</strong></td>
     <td>
       &ndash; Method (Benjamini–Hochberg, etc.).<br/>
       &ndash; Typical alpha threshold (FDR < 0.05).
@@ -451,7 +486,7 @@
     </td>
   </tr>
   <tr>
-    <td><strong>3d.3 Output &amp; Visualization</strong></td>
+    <td><strong>3e.3 Output &amp; Visualization</strong></td>
     <td>
       &ndash; Fold change (log2FC) and adjusted p-values.<br/>
       &ndash; Volcano plots, MA plots, heatmaps of significant genes.
@@ -462,7 +497,7 @@
     </td>
   </tr>
   <tr>
-    <td><strong>3d.4 Biological Interpretation</strong></td>
+    <td><strong>3e.4 Biological Interpretation</strong></td>
     <td>
       &ndash; Gene ontology, pathway analysis, etc.<br/>
       &ndash; Reference public databases and literature.
@@ -473,7 +508,7 @@
     </td>
   </tr>
   <tr>
-    <td><strong>3d.5 Potential Pitfalls / Mitigation</strong></td>
+    <td><strong>3e.5 Potential Pitfalls / Mitigation</strong></td>
     <td>
       &ndash; Common pitfalls (low-count genes, incomplete model).
     </td>
@@ -498,8 +533,7 @@
       &ndash; Use containers (Docker) or workflow managers (Nextflow, Snakemake).
     </td>
     <td>
-      &ndash; Not documenting software versions <br/>
-      &nbsp;&nbsp;&nbsp;→ irreproducible pipeline.<br/>
+      &ndash; Not documenting software versions → irreproducible pipeline.<br/>
       &ndash; Manual file handling introduces errors.
     </td>
   </tr>
