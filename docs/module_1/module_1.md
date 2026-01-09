@@ -24,9 +24,9 @@ h1 {
 
 ## Course Overview
 
-- Every Thursday: 1 hour lecture
-- Every Monday: 3 hour lab (starting from Jan 13)
-- Thursday (March 27): Invited lecturer(s)
+- Every Wednesday: 3 hr lab
+- Every Monday: 1 hr lecture
+- Module 12 (July 21): Guest lecturer(s)
 - Email: alice.chen@humber.ca
 - Respond within 4-6 business hours
 
@@ -49,9 +49,10 @@ h1 {
 <right id="col_right" style="flex: 1; padding-left: 10px;background-color:rgb(255, 255, 255);" markdown="span">
 
 ### Class Participation
+
 - Weekly class poll
-- 1% per class * (10 out of 12 classes)
-- Week 12 is mandatory attendance
+- 1% per lecture * (9 out of 12 lectures)
+- Lab 0 completion counts as 1%
         
 </right>
 </main>
@@ -106,7 +107,7 @@ h1 {
 ### Lab Assignments
 
 - 5 lab assignments x 10%
-- Each assignment is split into two parts (Part A and B) and due on the Friday 11:59 PM after Part B
+- Each assignment is split into two parts (Part A and B) and due on the Sunday 11:59 PM after Part B
 - For each assignment, 
 total mark of the assignment = total of Part A + total of Part B.
         
@@ -134,8 +135,8 @@ total mark of the assignment = total of Part A + total of Part B.
 
 ### Group Report - Clinical Case Study
 
-- Run a RNASeq pipeline as a group and write a case study report.
-- The lab on March 31 is reserved for group work and technical troubleshooting.
+- Run a Nextflow pipeline as a group and write a case study report.
+- The lab on July 9 is reserved for group work and technical troubleshooting.
         
 </right>
 </main>
@@ -147,10 +148,12 @@ total mark of the assignment = total of Part A + total of Part B.
 - All students requesting an extension must follow the missed and late evaluation policy.
 - **(Mandatory)** Complete this [form](https://forms.office.com/r/8tD3Xtvms9) for each missed assignment at least 24h before the assignment deadline.
 - Evaluation of missed and late assignments is subjected to my approval.
+- My email: alice.chen@humber.ca
 
 ----
 
 ## Class Policy on AI Usage
+
 - Humber College's AI Policy ([link](https://humber.ca/academic-division/academic-integrity/statement-on-ai))
 - Contends that un-cited and/or other unauthorized use of AI in assessments and assignments constitutes academic misconduct as defined in Humber’s Academic Regulations.
 - **Do not provide ChatGPT (or any other AI tool) human information that is not open access.**
@@ -158,9 +161,11 @@ total mark of the assignment = total of Part A + total of Part B.
 - **You are responsible for the accuracy of your answers.**
 
 ----
+
 ## Class Policy on AI Usage
 
 ### Lab Assignments
+
 Code Example:
 ```
 def foo():
@@ -174,6 +179,7 @@ Short Answer Example:
 This figure shows that Gene A in fruit fly is upregulated in the treatment group.
 Source: I made ChatGPT read the figure.
 ```
+
 ----
 
 ## Class Policy on AI Usage
@@ -217,7 +223,23 @@ AI Sources:
   - Gene expression profiling using Nextflow
   - Somatic variant analysis using Nextflow
   - Linkage analysis and clinical applications of GWAS
-- Find more details in the Critical Path pdf
+- Find more details in the Critical Path
+
+----
+
+## Public Databases
+
+<p style="text-align:center"><img src="../../img/assignment_1\image 2.png" alt="img"></p>
+
+- Public databases that provide biological and medical information to prepare a clinical report.
+
+----
+
+## GenVisR: “Genomic Visualizations in R”
+
+<p style="text-align:center"><img src="../../img\module_1\genvisr.png" alt="img" width = "500px"></p>
+
+- An R package that creates highly customizable publication-quality graphics supporting multiple species and focused primarily on a cohort level (i.e., multiple samples/patients).
 
 ----
 
@@ -247,10 +269,10 @@ AI Sources:
 
 <p style="text-align:center"><img src="../../img/module_1/nf-core-rnaseq_metro_map_grey.png" alt="img" width = "1200px"></p>
 
-[3]:(https://nf-co.re/rnaseq/3.18.0/)
+[3]:(https://nf-co.re/rnaseq/3.18.0/) "Ewels, P. *et al.* The nf-core framework for community-curated bioinformatics pipelines. *Nat. Biotechnol.* **38**, 276–278 (2020)."
 ----
 
-## Differential Expression Analysis using Nextflow <sup>[4]</sup>
+## Differential Expression Analysis using Nextflow <sup>[3]</sup>
 
 <main id="main" style="display: flex; border: 1px; padding: 10px;">
 
@@ -266,24 +288,25 @@ AI Sources:
 </right>
 </main>
 
-[4]:(https://nf-co.re/rnaseq/3.18.0/)
+[3]:(https://nf-co.re/differentialabundance/1.5.0/) "Ewels, P. *et al.* The nf-core framework for community-curated bioinformatics pipelines. *Nat. Biotechnol.* **38**, 276–278 (2020)."
 ----
 
-## Clinical workflow for tumor genome analysis <sup>[5]</sup>
+## Clinical workflow for tumor genome analysis <sup>[4]</sup>
 
 <p style="text-align:center"><img src="../../img/module_1/image.png" alt="img" width = "750px"></p>
 
 [5]:(https://doi.org/10.1200/JCO.2013.48.7215) "Van Allen EM, Wagle N, Levy MA. Clinical analysis and interpretation of cancer genome data. J Clin Oncol. 2013;31(15):1825-1833. doi:10.1200/JCO.2013.48.7215"
+
 ----
 
-## Somatic Variant Analysis using Nextflow <sup>[6]</sup>
+## Somatic Variant Analysis using Nextflow <sup>[3]</sup>
 
 <p style="text-align:center"><img src="../../img/module_1/nfcore_sarek.png" alt="img" width = "800px"></p>
 
-[6]:(https://nf-co.re/sarek/3.5.0/)
+[3]:(https://nf-co.re/sarek/3.5.0/) "Ewels, P. *et al.* The nf-core framework for community-curated bioinformatics pipelines. *Nat. Biotechnol.* **38**, 276–278 (2020)."
 ----
 
-## Linkage Analysis <sup>[7]</sup>
+## Linkage Analysis <sup>[5]</sup>
 <main id="main" style="display: flex; border: 1px; padding: 10px;">
 
 <left style="flex: 1; padding-right: 10px;background-color:rgb(255, 255, 255);" markdown="span">
@@ -299,10 +322,10 @@ AI Sources:
 </main>
 
 
-[7]:(https://doi.org/10.1038/nrg3908) "Ott J, Wang J, Leal SM. Genetic linkage analysis in the age of whole-genome sequencing. Nat Rev Genet. 2015;16(5):275-284. doi:10.1038/nrg3908"
+[5]:(https://doi.org/10.1038/nrg3908) "Ott J, Wang J, Leal SM. Genetic linkage analysis in the age of whole-genome sequencing. Nat Rev Genet. 2015;16(5):275-284. doi:10.1038/nrg3908"
 ----
 
-## GWAS <sup>[8]</sup>
+## Clinical Applications of GWAS <sup>[6]</sup>
 
 <main id="main" style="display: flex; border: 1px; padding: 10px;">
 
@@ -320,10 +343,26 @@ AI Sources:
 </right>
 </main>
 
-[8]:(https://doi.org/10.1038/s43586-021-00056-9) "Uffelmann, E., Huang, Q.Q., Munung, N.S. et al. Genome-wide association studies. Nat Rev Methods Primers 1, 59 (2021)."
+[6]:(https://doi.org/10.1038/s43586-021-00056-9) "Uffelmann, E., Huang, Q.Q., Munung, N.S. et al. Genome-wide association studies. Nat Rev Methods Primers 1, 59 (2021)."
 
 ----
 
-# Class Survey (1%)
+## Class Survey (1%)
 
-What do you want to learn from this course? \([link](https://forms.office.com/r/MDdTj1ncrV)\)
+What do you want to learn from this course?
+
+----
+
+## References:
+
+1. Pyeritz, R.E. Medicine in a genetic and genomic context. In *Emery and Rimoin’s Principles and Practice of Medical Genetics and Genomics* (7th edn) (eds. Pyeritz, R.E., Korf, B.R. & Grody, W\.W.) 1–20 (Academic Press, 2019).
+
+2. Yan, H., Ju, X., Huang, A. & Yuan, J. Advancements in technology for characterizing the tumor immune microenvironment. *Int. J. Biol. Sci.* **20**, 2151–2167 (2024).
+
+3. Ewels, P. *et al.* The nf-core framework for community-curated bioinformatics pipelines. *Nat. Biotechnol.* **38**, 276–278 (2020).
+
+4. Van Allen, E.M., Wagle, N. & Levy, M.A. Clinical analysis and interpretation of cancer genome data. *J. Clin. Oncol.* **31**, 1825–1833 (2013).
+
+5. Ott, J., Wang, J. & Leal, S.M. Genetic linkage analysis in the age of whole-genome sequencing. *Nat. Rev. Genet.* **16**, 275–284 (2015).
+
+6. Uffelmann, E. *et al.* Genome-wide association studies. *Nat. Rev. Methods Primers* **1**, 59 (2021).
